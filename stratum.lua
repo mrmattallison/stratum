@@ -1,23 +1,16 @@
 -- stratum
 --
 -- from earth to sky.
--- based on the Èmilie Gillet Mutable Instruments code.
--- uses @okyeron SC MUgens extensions by VBoehm
--- inspiration inc. @jaseknighter's krill and @21echos pedalboard
--- modulation LFO's copied from @sonoCircuit's concrete 
--- lfo lib added by @dndrks + @sixolet, with improvements by @Dewb and @sonoCircuit
+--
+-- uses @okyeron MUgens 
+-- lfolib by @dndrks + @sixolet 
+-- tweaks @Dewb + @sonoCircuit
 --
 -- E1 . . . . . . tempo
 -- E2 . . . . . . prev param
 -- E3 . . . . . . adjust value
 -- K2 / K3 . . .  prev / next tab
 -- K1 + E1 . . .  switch page
--- K1 + K2 . . .  page shortcut
---                (STRATUM: reseed,
---                 CLOUDS:  freeze)
--- K1 + K3 . . .  page shortcut
---                (STRATUM: cycle
---                 DV target)
 --
 -- version 0.3.0
 --
