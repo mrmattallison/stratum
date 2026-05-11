@@ -17,8 +17,25 @@
 
 local function check_mi_ugens()
   local b = "/home/we/.local/share/SuperCollider/Extensions/"
-  return util.file_exists(b .. "MiRings/MiRings.so")
-     and util.file_exists(b .. "MiClouds/MiClouds.so")
+  local rings_paths = {
+    b .. "mi-UGens/MiRings.so",
+    b .. "MiRings.so",
+    b .. "MiRings/MiRings.so"
+  }
+  local clouds_paths = {
+    b .. "mi-UGens/MiClouds.so",
+    b .. "MiClouds.so",
+    b .. "MiClouds/MiClouds.so"
+  }
+
+  local function any_exists(paths)
+    for _, path in ipairs(paths) do
+      if util.file_exists(path) then return true end
+    end
+    return false
+  end
+
+  return any_exists(rings_paths) and any_exists(clouds_paths)
 end
 
 if check_mi_ugens() then
